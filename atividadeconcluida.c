@@ -4,7 +4,7 @@ int main () {
 
     char cod2 [50];
     unsigned long int pop1, pop2;
-    int tur1, tur2;
+    int tur1, tur2, escolhadojogador;
     char cod1 [50];
     char estado1 [99];
     char estado2 [99];
@@ -119,7 +119,97 @@ int main () {
     else
     printf("Carta 2 Venceu!\n");
 
+    printf("Escolha qual atributo você deseja comparar:\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. Pib\n");
+    printf("4. Número de Pontos Turísticos\n");
+    printf("5. Densidade Populacional\n");
+    printf("6. Pib per Capita\n");
+    scanf("%d", &escolhadojogador);
+    printf("%s Vs %s\n", estado1, estado2);
 
+    switch (escolhadojogador)
+    {
+    case 1:
+        printf("O atributo escolhido foi População\n");
+        printf("%u Vs %u\n", pop1, pop2);
+        if(pop1 > pop2)
+        {
+            printf("Carta 1 Venceu\n");
+        } else if (pop1<pop2)
+        {
+            printf("Carta 2 Venceu\n");
+        } else {
+            printf("Empate\n");
+        }
+        break;
+    case 2:
+        printf("O atributo escolhido foi Área\n");
+        printf("%.1f Vs %.1f\n", area1, area2);
+        if(area1>area2){
+            printf("Carta 1 Venceu\n");
+        } else if (area1<area2)
+        {
+            printf("Carta 2 Venceu\n");
+        }else 
+        {
+            printf("Empate\n");
+        }
+    case 3:
+        printf("O atributo escolhido foi Pib\n");
+        printf("%.1f Vs %.1f\n", pib1, pib2);
+        if(pib1>pib2){
+            printf("Carta 1 Venceu\n");
+        }else if (pib1<pib2)
+        {
+            printf("Carta 2 Venceu\n");
+        }else {
+            printf("Empate\n");
+        }
+    case 4:
+        printf("O atributo escolhido foi Pontos Turísticos\n");
+        printf("%d Vs %d\n", tur1, tur2);
+        if (tur1>tur2)
+        {
+            printf("Carta 1 Venceu\n");
+        } else if (tur1<tur2)
+        {
+            printf("Carta 2 Venceu\n");
+        }else{
+            printf("Empate\n");
+        }
+    case 5:
+        printf("O atributo escolhido foi Densidade Populacional\n");
+        printf("%.2f Vs %.2f\n", denpop1, denpop2);
+        if (denpop1<denpop2)
+        {
+            printf("Carta 1 Venceu\n");
+        }else if (denpop1>denpop2)
+        {
+            printf("Carta 2 Venceu\n");
+        }else{
+            printf("Empate\n");
+        }
+    case 6:
+        printf("O atributo escolhido Pib per capita\n");
+        printf("%.2f Vs %.2f", pibc1, pibc2);
+        if (pibc1>pibc2)
+        {
+            printf("Carta 1 Venceu\n");
+        }else if (pibc1<pibc2)
+        {
+            printf("Carta 2 Venceu\n");
+        }else {
+            printf("Empate\n");
+        }
+        
+        
+        
+    default:
+    printf("Opção Inválida\n");
+        break;
+    }
 
 
 
